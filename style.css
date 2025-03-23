@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #2f3542;
+}
+.container .box{
+    width: 100px;
+    height: 100px;
+    border: 1px solid tomato;
+    box-shadow: 0 0 0 1px tomato;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}
+.status{
+    font-size: 25px;
+    margin: 20px 0;
+    color: white;
+}
+.reset{
+    background-color: rgb(239, 40, 40);
+    padding: 10px;
+    width: 100px;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 17px;
+    cursor: pointer;
+}
+img{
+    width: 70px;
+    height: 70px;
+}
+.popup{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.9;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.result{
+    color: white;
+    font-size: 40px; 
+    display: flex;
+    align-items: center;
+}
+h1{
+    color: cyan;
+    font-size: 50px;
+    font-weight: bold;
+}
+.win{
+    animation: winAnimation ease-in-out 1s infinite;
+}
+
+@keyframes winAnimation{
+    0%{background-color: black;}
+    100%{background-color: #2f3542;}
+}
